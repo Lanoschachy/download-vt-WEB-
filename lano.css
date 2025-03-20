@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+/* Reset CSS */
+body, h1, h3, p, div, span, input, select, label, button, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif; /* Apply font to all elements */
+}
+
+h2{
+text-align: center;    
+}
+
+body {
+    background: #121212;
+    color: #52d824;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    background: #1f1f1f;
+    border: 2px solid #484444;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    padding: 25px 30px;
+    animation: fadeIn 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#paste-link {
+    transform: scale(1); /* Memperkecil menjadi 80% dari ukuran asli */
+    width: 50%;
+  }
+
+#tiktok-url {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    color: #52d824;
+    background: #1f1f1f;
+    border: 2px solid #484444;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center; /* Teks input di tengah */
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    color: #1f1f1f; /* Warna teks tombol */
+    background: #52d824; /* Warna latar tombol */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background: #46b31e; /* Warna latar tombol saat hover */
+    transform: translateY(-3px);
+    box-shadow: 0px 0px 20px 5px rgba(70, 163, 33, 0.7);
+}
+
+#video-info {
+    display: none; /* Initially hidden */
+    display: flex;
+    text-align: center;
+    flex-direction: row; /* Buttons below preview */
+    align-items: center;  /* Center content horizontally */
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#preview {
+    max-width: 20%; /* Responsive video */
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.download-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center buttons */
+    width: auto;
+    max-width: 500px; /* Adjust as needed */
+    padding-left: 2%;
+    transition: background-color 0.3s ease;
+}
+
+.download-buttons a, #back-button {
+    margin: 10px 0;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    background: #484444;
+    color: #52d824;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+    font-size: 16px; /* Adjust as needed */
+}
+
+.download-buttons a:hover,
+#back-button:hover {
+    background-color: #52d824; /* Ubah warna latar belakang menjadi hijau saat hover */
+    color: #1f1f1f; /* Ubah warna teks menjadi hitam atau warna kontras lainnya */
+    box-shadow: 0px 0px 20px 5px rgba(70, 163, 33, 0.7);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    #tiktok-url, button {
+        font-size: 14px;
+    }
+
+    .download-buttons a, #back-button {
+        font-size: 14px;
+    }
+
+    #preview {
+        max-width: 40%; /* Ensure video is still responsive */
+    }
+}
