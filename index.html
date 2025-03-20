@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/icon.ico" type="image/x-icon">
+    <title>Lano VT Downloader</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="paste-link">
+    <h2>Download Video TikTok</h2>
+    <input type="text" id="tiktok-url" placeholder="Masukkan URL Video TikTok">
+    <button onclick="downloadTikTokVideo()">Download</button>
+    </div>
+
+    <div id="video-info" style="display: none;">
+        <video id="preview" controls></video>
+        <div class="download-buttons">
+            <a id="download-video-link" download>Download Video</a>
+            <a id="download-mp3-link" download>Download MP3</a>
+            <button id="back-button">Kembali</button>
+        </div>
+    </div>
+
+    <div id="error-message" class="error-message"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
